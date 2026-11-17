@@ -204,7 +204,7 @@ HTML
 # Data block. Only digits, '-', ':', 'T', 'Z' and a sanitised NAT word reach
 # the script, so nothing from the log can break out of it.
 awk -v generated="$(date -u +%Y-%m-%dT%H:%M:%SZ)" -v logfile="$LOG_FILE" '
-function iso(d, t) { gsub("/", "-", d); return d "T" t "Z" }
+function iso(d, t) { gsub("/", "-", d); gsub(/[^0-9-]/, "", d); gsub(/[^0-9:]/, "", t); return d "T" t "Z" }
 BEGIN { n = 0; nat = "unknown" }
 /NAT type:/ { nat = $0; sub(/.*NAT type: */, "", nat); gsub(/[^A-Za-z0-9 _-]/, "", nat); nat_ts = iso($1, $2) }
 /Proxy starting/ { start_ts = iso($1, $2) }
