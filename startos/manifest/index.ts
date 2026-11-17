@@ -5,7 +5,7 @@ export const manifest = setupManifest({
   id: 'snowflake',
   title: 'Snowflake',
   license: 'BSD-3-Clause',
-  packageRepo: 'https://github.com/Start9-Community/snowflake-startos',
+  packageRepo: 'https://github.com/Start9Labs/snowflake-startos',
   upstreamRepo:
     'https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake',
   marketingUrl: 'https://snowflake.torproject.org/',

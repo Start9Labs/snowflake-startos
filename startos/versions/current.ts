@@ -1,18 +1,14 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '2.15.3:1',
+  version: '2.15.3:2',
   releaseNotes: {
-    en_US:
-      'Requires StartOS 0.4.1 or later. Fixes memory use growing while the service runs.',
-    es_ES:
-      'Requiere StartOS 0.4.1 o posterior. Corrige el aumento del uso de memoria mientras el servicio está en ejecución.',
+    en_US: 'Now maintained by Start9 and published in the Start9 Registry.',
+    es_ES: 'Ahora lo mantiene Start9 y se publica en el Start9 Registry.',
     de_DE:
-      'Erfordert StartOS 0.4.1 oder neuer. Behebt einen während der Laufzeit des Dienstes ansteigenden Speicherverbrauch.',
-    pl_PL:
-      'Wymaga StartOS 0.4.1 lub nowszego. Naprawia wzrost zużycia pamięci podczas działania usługi.',
-    fr_FR:
-      "Nécessite StartOS 0.4.1 ou une version ultérieure. Corrige l'augmentation de la consommation de mémoire pendant le fonctionnement du service.",
+      'Wird jetzt von Start9 gepflegt und in der Start9 Registry veröffentlicht.',
+    pl_PL: 'Teraz utrzymywany przez Start9 i publikowany w Start9 Registry.',
+    fr_FR: 'Désormais maintenu par Start9 et publié dans le Start9 Registry.',
   },
   migrations: {
     up: async ({ effects }) => {},
