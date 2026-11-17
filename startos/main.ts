@@ -23,9 +23,15 @@ export const main = sdk.setupMain(async ({ effects }) => {
   )
 
   return sdk.Daemons.of(effects)
+    .addOneshot('chown', {
+      subcontainer: snowflake,
+      exec: { command: ['chown', '-R', 'snowflake:snowflake', '/data'] },
+      requires: [],
+    })
     .addDaemon('proxy', {
       subcontainer: snowflake,
       exec: {
+        user: 'snowflake',
         command: [
           'snowflake-proxy',
           '-log',
@@ -45,7 +51,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
             errorMessage: i18n('The proxy is not running'),
           }),
       },
-      requires: [],
+      requires: ['chown'],
     })
     .addDaemon('dashboard', {
       subcontainer: snowflake,
@@ -58,6 +64,8 @@ export const main = sdk.setupMain(async ({ effects }) => {
           String(uiPort),
           '-h',
           '/www',
+          '-u',
+          'snowflake',
         ],
       },
       ready: {
