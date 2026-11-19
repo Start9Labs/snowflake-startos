@@ -1,18 +1,18 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '2.15.3:3',
+  version: '2.15.4:0',
   releaseNotes: {
     en_US:
-      'The proxy and its dashboard now run as an unprivileged user, and the dashboard is hardened against malformed log lines.',
+      'Updated Snowflake to 2.15.4, which updates its dependencies with security fixes. The other changes in this release affect Tor bridges, not the proxy. Full notes: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/blob/v2.15.4/ChangeLog',
     es_ES:
-      'El proxy y su panel ahora se ejecutan como un usuario sin privilegios, y el panel está reforzado frente a líneas de registro malformadas.',
+      'Snowflake actualizado a 2.15.4, que actualiza sus dependencias con correcciones de seguridad. Los demás cambios de esta versión afectan a los puentes de Tor, no al proxy. Notas completas: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/blob/v2.15.4/ChangeLog',
     de_DE:
-      'Der Proxy und sein Dashboard laufen jetzt als nicht privilegierter Benutzer, und das Dashboard ist gegen fehlerhafte Logzeilen abgesichert.',
+      'Snowflake auf 2.15.4 aktualisiert, mit aktualisierten Abhängigkeiten, die Sicherheitskorrekturen enthalten. Die übrigen Änderungen dieser Version betreffen Tor-Bridges, nicht den Proxy. Vollständige Hinweise: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/blob/v2.15.4/ChangeLog',
     pl_PL:
-      'Proxy i jego panel działają teraz jako użytkownik bez uprawnień, a panel jest zabezpieczony przed błędnymi wierszami dziennika.',
+      'Zaktualizowano Snowflake do 2.15.4, która aktualizuje zależności o poprawki bezpieczeństwa. Pozostałe zmiany w tym wydaniu dotyczą mostków Tor, a nie proxy. Pełne informacje: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/blob/v2.15.4/ChangeLog',
     fr_FR:
-      "Le proxy et son tableau de bord s'exécutent désormais sous un utilisateur non privilégié, et le tableau de bord est protégé contre les lignes de journal malformées.",
+      'Snowflake mis à jour vers 2.15.4, qui met à jour ses dépendances avec des correctifs de sécurité. Les autres changements de cette version concernent les ponts Tor, pas le proxy. Notes complètes : https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/blob/v2.15.4/ChangeLog',
   },
   migrations: {
     up: async ({ effects }) => {},
