@@ -1,4 +1,4 @@
-FROM thetorproject/snowflake-proxy:v2.15.3 AS upstream
+FROM thetorproject/snowflake-proxy:v2.15.4 AS upstream
 
 FROM alpine:3.22
 RUN apk add --no-cache busybox-extras && addgroup -S snowflake && adduser -S -D -H -G snowflake snowflake
